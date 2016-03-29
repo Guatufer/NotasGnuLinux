@@ -1,0 +1,26 @@
+Instalar Framework Oh-my-zsh.
+-----------------------------
+
+Este procedimiento está probado en distribuciones derivadas de Debian.
+
+Consideraciones:
+* Es necesario tener instalada la shell de comandos "zsh".
+* La instalación del framework puede ser realizada de manera automática o manual(compilando ficheros).
+* Realizaremos la instalación de manera automática (curl | wget).
+
+Inicio del tutorial:
+1. Verificar la instalación de "zsh":
+	$zsh --version
+	* Elegir "zsh" como predeterminada: chsh -s /bin/zsh
+	* Verificar la shell: $ echo $SHELL
+		- Es necesario reiniciar.
+	* En caso de estar instalado saltar al numeral 3. 
+2. Para instalar "zsh", ejecutar en la terminal:
+	$apt-get install zsh
+3. Ejecutar en el terminal:
+	a.) Usando curl:
+	$ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+	b.) Usando wget:
+	$ wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+4. La configuración de Oh-my-zsh se realiza desde el fichero .zshrc
