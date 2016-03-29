@@ -1,0 +1,41 @@
+Lanzador de apliacaciones.
+--------------------------
+
+Este proceso está probado en distribuciones derivadas de Debian.
+
+Consideraciones:
+1. Los lanzadores tienen extensión ".desktop".
+2. Los lanzadores se hallan en el directorio /usr/share/applications/
+3. Es posible que sea necesario reiniciar el sistema en algunas distribuciones.
+
+Formato básico de fichero:
+[Desktop Entry]
+Name=Nombre del programa a ejecutar
+Comment=Comentario sobre el programa
+Exec=/home/user/DirectorioPrograma/NombreEjecutable
+Icon=/home/user/DirectorioImagen/IconPrograma
+Terminal=false
+Type=Application
+
+Ejemplo:
+Creación de lanzador para Eclipse. El ejemplo será creado de manera básica,
+aunque es posible realizarlo de muchas formas. La opción Categories, es usada
+para que se agrupe en las opciones propias del Menú de XFCE.
+
+1. Ubicados en la terminal:
+	- vim /usr/share/application/eclipse.desktop
+2. Desde vim editor ó el seleccionado
+	[Desktop Entry]
+	Name=Eclipse
+	Comment=IDE for PHP
+	Exec=/home/algun_user/Software/Eclipse/eclipse/eclipse
+	Icon=/home/algun_user/Software/Eclipse/eclipse/icon.xpm
+	Categories=Development;IDE;
+	Terminal=false
+	Type=Application
+
+Detalles del ejemplo:
+user = "algun_user"
+DirectorioPrograma = "Software/Eclipse/eclipse"
+NombreEjecutable = "eclipse"
+IconPrograma = "icon.xpm"
