@@ -1,0 +1,11 @@
+Forma correcta de descomprimir archivos comprimidos con la extensión .tar.gz
+
+Indico que es la manera correcta ya que es el procedimiento que muchos fabricantes de software sugieren
+para una correcta compilación de programas.
+
+En la consola:
+  tar -xvzf <archivo.tar.gz>
+
+No se recomienda dar clic derecho extraer ya que puede haber inconvenientes dependiendo de la
+distro utilizada. Por esto la forma correcta es desde la consola. Ademas nos muestra el log en pantalla
+de aquello que se descomprime.
