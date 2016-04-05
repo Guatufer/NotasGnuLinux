@@ -1,0 +1,41 @@
+Instalación y configuración de Java SE Development Kit.
+
+Consideraciones:
+- Este procedimiento está probado para distros basadas en Debian.
+- Es una de las maneras de realizar la instalación.
+- En el sitio de oracle se descarga el paquete con extensión .tar.gz.
+- Se recomienda realizar comprobaciones de paquete original (SHA, md5sum).
+
+1. Descargar el paquete del sitio oficial:
+  - www.oracle.com > Pestaña downloads.
+  - Descargar la última versión del JDK, según la arquitectura del sistema.
+  - Para este procedimiento Linux x64.
+  - Paquete jdk-8u11-linux-x64.tar.gz
+  
+2. Descomprimir paquete desde la consola
+  $ tar xvzf jdk-8u11-linux-x64.tar.gz
+
+3. Desde este punto es posible usar java únicamente ingresando al directorio descomprimido.
+   Es neesario agregar las variables de entorno para Java en caso de querer usarlo desde el sistema en general.
+
+4. Chequeo de variables de entorno. Desde la consola.
+  $ echo $PATH
+
+5. Configuración de manera temporal de las varibales de entorno para Java(JDK y JRE).
+  - Para este caso pondré el directorio descomprimido en el /Home del user actual "rata".
+    Notar que no es necesario indicar el nombre del user "rata".
+  - Desde la consola:
+    $ export PATH="$PATH:$HOME/jdk1.8.0_11/jre/bin"
+    $ export PATH="$PATH:$HOME/jdk1.8.0_11/bin"
+  - Comprobar la configuración, desde la consola:
+    $ java -version
+  - Esta configuración es temporal ya que al cerrar la consola se pierden los cambios, y es necesario agregar las variables de 
+    entorno al abrir nuevamente una shell de comandos.
+    
+6. Un método para configurar automáticamente las variables de entorno al iniciar una consola.
+  - Editar el fichero de configuración de la consola que tengamos.
+  - Comprobar la consola por default, desde el terminal
+    $ echo $SHELL.
+  - Editar el fichero .bashrc ó .zshrc, según sea la shell predeterminada.
+  - Al final del fichero agregar las rutas del paso 5.
+  
