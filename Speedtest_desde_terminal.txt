@@ -1,0 +1,15 @@
+Hacer test de velocidad desde la terminal.
+------------------------------------------
+
+Consideraciones:
+- Procedimiento probado en distribuciones basadas en Debian.
+- Son usados complementos de python.
+
+1. Instalar "pip" (python Package Index). Herramienta para instalar paquetes python de PyIP.
+  - $apt-get install python-pip.
+
+2. Instalar el paquete speedtest-cli.
+  - $pip install speedtest-cli
+  
+3. Realizar test desde el terminal.
+  - $speedtest-cli
