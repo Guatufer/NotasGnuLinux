@@ -1,0 +1,22 @@
+Como verrificar firmas MD5 y SHA.
+---------------------------------
+
+Existen varios tipos de firmas de verificación o "cheaksums".
+Según el paquete se utilizan MD5, SHA1, SHA256 o SHA512.
+
+Consideraciones:
+- Los métodos de verificación estan probados en distribuciones basadas en Debian.
+- Ejecutar cada comando en la consola.
+- Comparar la cadena de caracteres de la consola con la suministrada por los responsables del paquete descargado. 
+
+MD5:
+$ md5sum <NombrePacquete>
+
+SHA1:
+$ sha1sum <NombrePacquete>
+
+SHA256:
+$ sha256sum <NombrePacquete>
+
+SHA515:
+$ sha512sum <NombrePacquete>
