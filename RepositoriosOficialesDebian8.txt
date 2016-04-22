@@ -1,0 +1,36 @@
+En la consola
+ vim /etc/apt/sources.list
+ 
+En el fichero sources.list
+ #
+# jessie-oficiales
+deb http://mirrors.kernel.org/debian/ jessie main contrib non-free
+deb-src http://mirrors.kernel.org/debian/ jessie main contrib non-free
+
+# jessie-actualizaciones-seguridad
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+
+# jessie-actualizaciones-sistema
+deb http://mirrors.kernel.org/debian/ jessie-updates main contrib non-free
+deb-src http://mirrors.kernel.org/debian/ jessie-updates main contrib non-free
+deb http://mirrors.kernel.org/debian jessie-proposed-updates main contrib non-free
+deb-src http://mirrors.kernel.org/debian jessie-proposed-updates main contrib non-free
+
+# jessie-backports
+deb http://mirrors.kernel.org/debian/ jessie-backports main contrib non-free
+deb-src http://mirrors.kernel.org/debian/ jessie-backports main contrib non-free
+
+# deb-multimedia
+# apt-get install deb-multimedia-keyring
+deb http://www.deb-multimedia.org jessie main non-free
+
+En la consola:
+  apt-get update
+
+En caso de error: 
+  Error de GPG: http://www.deb-multimedia.org jessie InRelease: Las firmas siguientes no se pudieron verificar porque su llave pública no está disponible: NO_PUBKEY 07DC563D1F41B907
+
+En la consola:
+  apt-get install deb-multimedia-keyring
+  apt-get update
