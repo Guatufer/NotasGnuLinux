@@ -1,0 +1,29 @@
+Instalar paquetes DEB con dpkg.
+-------------------------------
+
+Consideraciones:
+  - Obtener información adiconal escribiendo en el terminal -> $ man dpkg.
+  - El siguiente procedimeinto se ha probado en distribuciones basadas en Debian.
+  
+Instalar un paquete:
+  sh dpkg -i paquete.deb
+
+Verificar la instalación del paquete:
+  sh dpkg -l | grep 'paquete'
+  
+Ejemplo:
+Para el siguiente ejemplo instalaremos "Vagrant" y "VirtualBox". Inicialmente descargamos los paquetes "vagrant_1.8.1_x86_64.deb"
+y "virtualbox-5.0_5.0.18-106667~Ubuntu~trusty_amd64.deb" de los sitios oficiales para la correspondiente distribución.
+Luego verificar las checksum.
+  - En el terminal
+   sh dpkg -i vagrant_1.8.1_x86_64.deb
+   sh dpkg -i virtualbox-5.0_5.0.18-106667~Ubuntu~trusty_amd64.deb
+   
+  - Verificar la instalación:
+   sh dpkg -l | grep 'vagrant'
+      ii  vagrant    1:1.8.1    amd64        no description given
+   
+   sh dpkg -l | grep 'virtualbox'
+      ii  unity-scope-virtualbox    0.1+13.10.20130723-0ubuntu1     all          VirtualBox scope for Unity
+      iU  virtualbox-5.0            5.0.18-106667~Ubuntu~trusty     amd64        Oracle VM VirtualBox
+
