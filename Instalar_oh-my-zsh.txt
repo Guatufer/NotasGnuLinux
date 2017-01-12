@@ -25,4 +25,6 @@ Inicio del tutorial:
 	$ wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 4. La configuración de Oh-my-zsh se realiza desde el fichero .zshrc
 5. Listado de los temas de los que dispone “Oh my Zsh!” para personalizar el prompt, con imágenes, en el siguiente enlace:
-   https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+   https://github.com/robbyrussell/oh-my-zsh/wiki/Themes.
+6. Usar alias para configuracion del fichero "zshrc":
+   sh: alias configuracion_zsh="vim ~/.zshrc"
