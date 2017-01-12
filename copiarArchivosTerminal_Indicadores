@@ -1,0 +1,19 @@
+Copiar archivos en el terminal con indicadores:
+-----------------------------------------------
+
+Consideraciones:
+  - Procedimiento probado en distribuciones basadas en Debian.
+  - Procedimeinto basado en la instalación del programa GCP.
+  - "sh" indica el uso del terminal, no es un comando.
+  
+Instalar GCP:
+   sh: sudo apt-get install gcp -y
+   - En caso de querer reemplazar el comando "cp" con "gcp", en caso contrario copiar archivos con "gcp".
+   sh: echo "alias cp='gcp'" >> $HOME/.bashrc
+   
+Ejemplo:
+En el siguiente ejemplo se creará un fichero de prueba y se copiara en la misma carpeta usando 
+"cp" y "gcp".
+  - sh: touch archivoPrueba.txt
+  - sh: cp archivoPrueba.txt archivo2.txt
+  - sh: gcp archivoPrueba.txt archivo3.txt
