@@ -1,0 +1,7 @@
+Recopilación de métodos para montar particiones NTFS en Ubuntu.
+
+Probado en Ubuntu 16.04.
+
+Abrir terminal Shortcut(Ctrl+Alt+T)
+
+sh sudo ntfsfix /dev/sdb1
